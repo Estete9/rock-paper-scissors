@@ -6,18 +6,16 @@ function computerPlay(choices) {
   let randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
 }
-// creates and attaches event listener
-let btns = document.querySelectorAll(".button");
-btns.forEach((btn) => btn.addEventListener("click", gameLoop));
+
+// creates and attaches event listener that runs the game loop
 // show list of choices to player
-// ask for player to enter choice
-// check if choice is correct
-//      if not correct, ask to enter again
-function playerTurn() {}
+const btns = Array.from(document.querySelectorAll(".button"));
+btns.forEach((btn) => btn.addEventListener("click", gameLoop));
+
 // compare choices
 // check if player choice beats computer
 // if choices are equal, ask to play again
-function gameLoop() {
+function gameLoop(e) {
   // make list of choices
   let rock = "rock";
   let paper = "paper";
@@ -27,7 +25,8 @@ function gameLoop() {
   let computerScore = 0;
 
   let computerChoice = computerPlay(choices);
-  let playerChoice = playerTurn();
+  let playerChoice = e.target.id;
+  console.log(playerChoice);
   if (
     (computerChoice == choices[0] && playerChoice == "paper") ||
     (computerChoice == choices[1] && playerChoice == "scissors") ||
