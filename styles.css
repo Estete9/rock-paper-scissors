@@ -1,0 +1,7 @@
+#content {
+  /* width: 400px;
+  border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  flex: 1, 1, auto;
+}

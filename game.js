@@ -1,5 +1,4 @@
 // game starts
-gameLoop();
 
 // make random choice for computer from list of choices
 // computerPlay(choices)
@@ -7,16 +6,14 @@ function computerPlay(choices) {
   let randomNumber = Math.floor(Math.random() * 3);
   return choices[randomNumber];
 }
-
+// creates and attaches event listener
+let btns = document.querySelectorAll(".button");
+btns.forEach((btn) => btn.addEventListener("click", gameLoop));
 // show list of choices to player
 // ask for player to enter choice
 // check if choice is correct
 //      if not correct, ask to enter again
-// function playerTurn() {
-//   let choice = prompt("choose: rock, paper, scissors").toLowerCase();
-//   console.log(choice);
-//   return choice;
-// }
+function playerTurn() {}
 // compare choices
 // check if player choice beats computer
 // if choices are equal, ask to play again
