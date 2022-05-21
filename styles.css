@@ -1,7 +1,13 @@
 #content {
-  /* width: 400px;
-  border: 1px solid black; */
+  /* width: 400px; */
+  border: 1px solid black;
   display: flex;
   flex-direction: row;
   flex: 1, 1, auto;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4em;
+}
+.button {
+  font-size: 44px;
 }
